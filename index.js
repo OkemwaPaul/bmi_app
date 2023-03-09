@@ -13,18 +13,20 @@ app.get('/', function (request, response) {
 })
 
 app.post('/calculate', (request, response)=> {
-   // response.end('Your height is: '+ request.body.height + 'weight: ' + request.body.weight + ' and BMI: ' +bmi );
    const height=Number(request.body.height);
    const weight=Number(request.body.weight);
    const bmi=(weight/ (height*2))
    let status; 
-   if (bmi<18.5){
+   if (bmi<=18.5){
     status = "You are underweight";
-   } else if (bmi<25)
+   } else if (bmi=>18.5<25)
    {
-status= "Nomal";
-   } else {
-status="obese";
+status= "You are healthy";
+   } else if (bmi=>25<30) {
+    status = "You are overweight";
+   }
+   else {
+status="You are Obese";
    }
    response.render("result", {bmi, status});
 });
