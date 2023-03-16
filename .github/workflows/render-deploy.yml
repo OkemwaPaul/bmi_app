@@ -1,0 +1,31 @@
+
+name: Node.js CI
+
+on:
+  push:
+    branches: [ main ] 
+  pull_request:
+    branches: [ main ] 
+    
+    jobs: 
+      build:
+      runs-on: ubuntu-latest
+      
+      steps:
+      -uses: actions/checkout@v2
+      -uses: bounceapp/render-action@0.6.0
+        with: 
+          render-token: ${{secrets.RENDER_API_KEY}}
+          github-token: ${{secrets.ACC_API_KEY}}
+          service-id:"srv-cg9d9nu4dad5p6q8ntqg"
+          retries: 20
+          wait: 16000
+          sleep: 30000
+          
+      
+      
+
+      
+      //api key   rnd_Xuh2CI64rTO6FzfcDELKIrRBG14u
+      // token  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
+  
