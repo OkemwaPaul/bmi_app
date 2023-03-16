@@ -21,11 +21,3 @@ on:
           retries: 20
           wait: 16000
           sleep: 30000
-          
-      
-      
-
-      
-      //api key   rnd_Xuh2CI64rTO6FzfcDELKIrRBG14u
-      // token  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
-  
