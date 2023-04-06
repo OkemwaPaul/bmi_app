@@ -1,6 +1,6 @@
 const express = require('express');
 const app =express();
-const port =3002;
+const port =process.env.PORT || 3002;
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({extended: false}));
 
@@ -32,4 +32,4 @@ status="You are Obese";
 });
 
 app.listen(port);
-console.log('Node server started on port 3002');
+console.log(`server listening on port ${port}`);

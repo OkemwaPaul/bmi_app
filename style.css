@@ -1,0 +1,19 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+/* Status container */
+.status {
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+    background-color: blue;
+}
+
+/* Hide the images by default */
+.mySlides {
+	display: none;
+}
